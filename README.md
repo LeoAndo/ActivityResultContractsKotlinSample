@@ -1,0 +1,2 @@
+# ActivityResultContractsSample
+ActivityResultContractsを使ったサンプルコード
