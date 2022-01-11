@@ -21,15 +21,14 @@ import androidx.navigation.fragment.findNavController
 class FirstFragment : Fragment() {
 
     // StartActivityResultの実装
-    private val launcher = prepareCall(ActivityResultContracts.StartActivityForResult()) {
-        // コールバックとしてActivity Resultを受け取れる.
-        // 呼び出し先のActivityが閉じたときに呼び出される.
-        Log.d("andoleo", "resultCode: " + it.resultCode)
-        Log.d("andoleo", "data: " + it.data?.getStringExtra("key"))
-    }
-    val launcher2 = prepareCall(ActivityResultContracts.RequestPermission()) {
-        // 権限が付与された場合は、コールバックとして trueが返却される
-        // すでに権限付与されている場合で、launcher2.launchを呼んでもコールバックの中に入らない.
+    private val launcher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+            // コールバックとしてActivity Resultを受け取れる.
+            // 呼び出し先のActivityが閉じたときに呼び出される.
+            Log.d("andoleo", "resultCode: " + it.resultCode)
+            Log.d("andoleo", "data: " + it.data?.getStringExtra("key"))
+        }
+    private val launcher2 = registerForActivityResult(ActivityResultContracts.RequestPermission()) {
         Log.d("andoleo", "permission grant: $it")
         if (it) {
             Toast.makeText(requireContext(), "xxここで権限が必要な処理を行う.", Toast.LENGTH_SHORT).show()
