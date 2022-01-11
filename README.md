@@ -2,7 +2,7 @@
 
 Sample for [ActivityResultContracts](https://developer.android.com/reference/androidx/activity/result/contract/ActivityResultContracts)<br>
 
-The startActivityForResult () method of Activity is<br>
+The Activity#startActivityForResult() method is<br>
 Deprecated from version 1.3.0-alpha02 of the "androidx.appcompat: appcompat" library.<br>
 As an alternative, decided to use the "ActivityResultContract" class.<br>
 (https://developer.android.com/jetpack/androidx/releases/appcompat?hl=ja#1.3.0-alpha02)<br>
