@@ -15,7 +15,7 @@ As an alternative, decided to use the "ActivityResultContract" class.<br>
 
 | OS 8.0 (Api Level 26)
 | --- |
-| <img src="https://user-images.githubusercontent.com/16476224/105200186-e8877680-5b82-11eb-895a-d43274a4bcd7.gif" width=320> |
+| <img src="https://user-images.githubusercontent.com/16476224/148958424-abdebbe2-188c-466c-9592-4a74a86b6961.gif" width=320> |
 
 # For Java
 
